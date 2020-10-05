@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quote</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.container{
+			min-height: 84vh;
+			background-color: #ff9999;
+			width: 70%;
+		}
+		.main-container{
+            margin-top: 10%;
+			background-color: #ffcccc;
+			box-shadow: 1px 1px 13px brown;
+			border: 2px solid #ff8080;
+		}
+		.btn{
+			background: #ff8080;
+			border: 2px solid grey;
+			box-shadow: 1px 1px 10px #ff6060;
+		}
+		button:hover{
+			background-color: cyan;
+		}
+		#h3{
+			font-style: italic;
+		}
+		#h4{
+			color: blue;
+			float: right;
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+  <div class="container my-5">
+  	<div class="row max-height align-items-center ">
+  	<div class="main-container col-8 col-md-6 mx-auto text-center ">
+  		<button class="btn font-weight-bold btn-lg m-4" onclick="prince()" id="generate-btn">Generate Quote</button> <blockquote><i class="fa fa-quote-right" style="font-size:60px; color:red;"></i> <h3 class="text-center pb-3" id="h3"></h3></blockquote>
+  		<h4 id="h4"></h4>
+  	</div>
+    </div>
+  </div>
 
+  <script>
+  	 
+       var quotes = ['Never trust people who smile constantly. They’re either selling something or not very bright.', 'If you don’t like something change it; if you can’t change it, change the way you think about it.', 'The purpose of life is to believe, to hope, and to strive. ', 'All our dreams can come true if we have the courage to pursue them. ', 'Without the rain there would be no rainbow. ', 'The purpose of human life is to serve and to show compassion and the will to help others. ']
+       var author = ['- Laurell K. Hamilton', '- Mary Engelbreit', '- Indira Gandhi', '- Walt Disney', '- Gilbert Chesterton', '- Albert Schweitzer']
+        function prince() {
+        	var index = Math.floor(Math.random()*quotes.length);
+        	document.getElementById('h3').innerHTML = quotes[index];
+        	document.getElementById('h4').innerHTML = author[index];
+        }
+  </script>
+</body>
+</html>
